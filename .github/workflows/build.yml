@@ -81,7 +81,7 @@ jobs:
 
   publish:
     if: |
-      github.repository == 'qdm12/ddns-updater' &&
+      github.repository == 'miguel93041/ddns-updater' &&
       (
         github.event_name == 'push' ||
         github.event_name == 'release' ||
@@ -107,7 +107,7 @@ jobs:
           flavor: |
             latest=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
           images: |
-            ghcr.io/qdm12/ddns-updater
+            ghcr.io/miguel93041/ddns-updater
             qmcgaw/ddns-updater
           tags: |
             type=ref,event=pr
