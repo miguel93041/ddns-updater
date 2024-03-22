@@ -119,7 +119,7 @@ func (p *Provider) Update(ctx context.Context, client *http.Client, ip netip.Add
 		Path:   "/json/",
 		RawQuery: url.Values{
 			"user":   {p.username},
-			"apikey": {p.key},
+			"password": {p.key},
 			"host":   {p.BuildDomainName()},
 			"ip":     {ip.String()},
 			"lang":   {"en"},
